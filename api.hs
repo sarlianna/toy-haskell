@@ -35,8 +35,8 @@ things = [ Thing 1 "sheep" "thirty"
 -- "fake" error handling for now until I understand the types better
 findId :: Integer -> [Thing] -> Thing
 findId thId [] = Thing 0 "err" "error"
-findId thId (x:y) | (tid x) == thId = x
-                  | otherwise = findId thId y
+findId thId (x:xs) | (tid x) == thId = x
+                  | otherwise = findId thId xs
 
 
 -- API routing and application
